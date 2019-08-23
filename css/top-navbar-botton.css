@@ -1,0 +1,214 @@
+#piiic-header{
+    position: relative;
+    z-index: 999;
+}
+#top-navbar-botton{
+    height:50px;
+    width:100%;
+    background:rgba(0,0,0,0.3);
+    border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+#top-navbar-botton ul{
+    margin:auto;
+    width:1024px;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    position:relative;
+}
+#top-navbar-botton ul li{
+    text-align: center;
+    width:80px;
+    height:50px;
+    line-height: 50px;
+    float:left;
+    display:inline-block;
+    color:white;
+    font-size:18px;
+    font-family: "华文细黑";
+    cursor: pointer;
+}
+#top-navbar-botton ul li:hover{
+    animation :boxShine 1s infinite alternate
+}
+#top-navbar-botton ul li.searchli:hover{
+    animation:null;
+}
+#top-navbar-botton ul li.searchli{
+    width:152px;
+    margin-left:20px;
+    transition: all 4s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.searchbox{
+    margin-top:7px;
+    border:1px solid white;
+    height:35px;
+    border-radius: 3px;
+    box-shadow: inset -15px 2px 9px -14px #FFF, inset 5px -9px 10px -10px #FFF;
+}
+.searchbox input{
+    font-size: 14px;
+    color: #999;
+    display: block;
+    float: left;
+    width: 110px;
+    padding: 4px 0 4px 7px;
+    border: 0;
+    height: 33px;
+    line-height:33px;
+    border-radius: 3px;
+    background: 0 0;
+    transition: all 4s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.searchbox input:focus{
+    box-shadow: 0 0 14px #03a9f4;
+    animation :boxShineBlue 1s infinite alternate;
+}
+
+#top-navbar-botton ul li.search-piiic{
+    line-height: 46px;
+    height:46px;
+    margin-left:5px;
+    border:2px solid #bbb;
+    border-radius: 3px;
+}
+#top-navbar-botton ul li.search-piiic:hover{
+    animation :boxShineSearch 1s infinite alternate;
+}
+#shareStation{
+    right:0;
+    position:absolute;
+}
+#uploadGithub{
+    position: absolute;
+    right:80px;
+}
+#downloadTemp{
+    position: absolute;
+    right:160px;
+}
+
+
+@-moz-keyframes boxShine {
+    0% {
+        box-shadow: 0 0 10px #0caba8;
+    }
+    100% {
+        box-shadow: 0 0 200px #0caba8;
+    }
+}
+@-o-keyframes boxShine {
+    0% {
+        box-shadow: 0 0 10px #0caba8;
+    }
+    100% {
+        box-shadow: 0 0 200px #0caba8;
+    }
+}
+@keyframes boxShine {
+    /**/
+    /*bg shine*/
+
+    0% {
+        box-shadow: 0 0 10px #0caba8;
+    }
+    100% {
+        box-shadow: 0 0 200px #0caba8;
+    }
+}
+
+
+@-moz-keyframes boxShineBlue {
+    0% {
+        box-shadow: 0 0 10px #03a9f4;
+    }
+    100% {
+        box-shadow: 0 0 30px #03a9f4;
+
+    }
+}
+@-o-keyframes boxShineBlue {
+    0% {
+        box-shadow: 0 0 10px #03a9f4;
+    }
+    100% {
+        box-shadow: 0 0 30px #03a9f4;
+    }
+}
+@keyframes boxShineBlue {
+    /**/
+    /*bg shine*/
+
+    0% {
+        box-shadow: 0 0 10px #03a9f4;
+    }
+    100% {
+        box-shadow: 0 0 30px #03a9f4;
+    }
+}
+@-moz-keyframes boxShineGlod {
+    0% {
+        box-shadow: 0 0 20px rgb(255,215,0);
+    }
+    100% {
+        box-shadow: 0 0 40px rgb(255,215,0);
+
+    }
+}
+@-o-keyframes boxShineGlod {
+    0% {
+        box-shadow: 0 0 20px rgb(255,215,0);
+    }
+    100% {
+        box-shadow: 0 0 40px rgb(255,215,0);
+    }
+}
+@keyframes boxShineGlod {
+    /**/
+    /*bg shine*/
+
+    0% {
+        box-shadow: 0 0 20px rgb(255,215,0);
+    }
+    100% {
+        box-shadow: 0 0 40px rgb(255,215,0);
+    }
+}
+
+
+@-moz-keyframes boxShineSearch {
+    0% {
+        box-shadow: 0 0 10px #03a9f4;
+    }
+    100% {
+        box-shadow: 0 0 30px #03a9f4,inset -15px 2px 9px -14px #FFF, inset 5px -9px 10px -10px #FFF;
+
+    }
+}
+@-o-keyframes boxShineSearch {
+    0% {
+        box-shadow: 0 0 10px #03a9f4;
+    }
+    100% {
+        box-shadow: 0 0 30px #03a9f4,inset -15px 2px 9px -14px #FFF, inset 5px -9px 10px -10px #FFF;
+    }
+}
+@keyframes boxShineSearch {
+    /**/
+    /*bg shine*/
+
+    0% {
+        box-shadow: 0 0 10px #03a9f4;
+    }
+    100% {
+        box-shadow: 0 0 30px #03a9f4,inset -15px 2px 9px -14px #FFF, inset 5px -9px 10px -10px #FFF;
+    }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saika_PIIIC_AWSL</title>
+    <link type="text/css" rel="stylesheet" href="../css/main.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/piiic-main.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/piiic-main-ie.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/preface.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/gift.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/skill.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/gist.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/share.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/piiic-toollist-botton.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/top-navbar-botton.css"/>
+    <script rel="script">
+
+        var globalDiv = ["#preface", "#gift", "#skill", "#gist", "#piiic-toollist-botton", "#top-navbar-botton"],
+            globalPiiicContentDiv = ["#preface", "#gift", "#skill", "#gist"], // 放置需要加载的长图的div id，会绑定相应的滑动展示动作
+            globalPiiicContentDivHeight = [],
+            globalLock = [true, true, true, true],
+            agentType = false,
+            divBackgroundArr = [".sk-test-title-img", ".sk-totalTest-title-img", ".sk-logistics-title-img"],
+            clickFlag = {},
+            globalObj = {};
+        var stopFun;
+    </script>
+    <script rel="script" src="../nativeJs/jquery.min.js"></script>
+    <script rel="script" src="../nativeJs/jquery.lazyload.js"></script>
+    <script rel="script" src="../nativeJs/html2canvas.js"></script>
+    <script rel="script" src="../myJs/util.js"></script>
+    <script rel="script" src="../myJs/piiic-main.js"></script>
+</head>
+<body>
+    <div id="piiic-header">
+        <div id="top-navbar-botton"></div>
+        <div id="piiic-toollist-botton"></div>
+    </div>
+
+    <div id="piiic-container" class="piiic-main-container" >
+
+        <!-- 右侧文字 -->
+        <div id="div-right-font">
+            <div id="right-font" class="right-font">DNALSI SEDOHR</div>
+        </div>
+        <!--[if !IE]><!--><!--<textarea id="right-font" class="right-font right-font-Hie" readonly="readonly" disabled="disabled" >DNALSI SEDOHR</textarea>--> <!-- <![endif]-->
+        <!--[if IE]><!--<textarea id="right-font" class="right-font-ie" readonly="readonly" disabled="disabled" >DNALSI SEDOHR</textarea>--> <![endif]-->
+
+        <!-- 头部背景布局 -->
+        <div id="background-header" class="background-header">
+
+            <!-- 背景图片 -->
+            <img class="background-logo" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/formation/logo_rhodes.png"/>
+
+            <!-- 渐变后幕 -->
+            <div class="back-curtain1"></div>
+            <div class="back-curtain2"></div>
+            <div class="curtain-distance"></div>
+
+            <!-- 线条 -->
+            <img class="back-line" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/background/back-line.png">
+            <p class="line-character">RHODES ISLAND</p>
+
+            <!-- 人物 -->
+            <img class="character-noweapon" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/character/Vigna/character-noweapon.png">
+            <img class="line-opacity" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/background/line-opacity.png">
+            <img class="character-weapon" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/character/Vigna/character-weapon.png">
+
+            <!-- LOGO -->
+            <img class="moyulogo" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/background/moyulogo-min.png">
+            <!--<img class="arknight" src="img/arknight-min.png">-->
+            <img class="arknight" src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/background/arknight-min.png">
+
+
+
+            <!-- 基础信息 -->
+            <div class="base-info">
+                <hr style="width:340px;border-top:3px solid #fff;border-left:0;border-right:0;border-bottom:0;margin-bottom:4px;margin-top:0;margin-right:41px;">
+                <hr style="width:200px;border-top:3px solid #fff;border-left:0;border-right:0;border-bottom:0;margin-bottom:0;margin-top:0;margin-right:181px">
+
+                <div style="display:inline-block;width:257px;margin-top:7px;">
+                    <p style="display:inline-block">代号</p>
+                    <div style="display:inline-block;margin-left:13px;">红豆</div>
+                </div>
+                <div style="display:inline-block">
+                    <p>攻击范围</p>
+                </div>
+
+                <div style="width:272px;overflow:hidden;margin-top:7px;">
+                    <div style="float:left;width:60px;color:white;display:inline-block">特性</div>
+                    <div style="float:left;width:185px;color:white;display:inline-block;word-wrap:break-word"> 击杀敌人后获得1点
+                        部署费用撤退时返还
+                        初始部署费用</div>
+                </div>
+                <div style="margin-top:7px;">
+                    <div style="width:53px;color:white;display:inline-block">定位</div>
+                    <div style="color:white;display:inline-block">近战位 输出 费用回复</div>
+                </div>
+
+                <!-- 攻击范围 -->
+                <div class="attack-scale" style="font-family: '黑体'">
+                    ■■
+                </div>
+            </div>
+
+            <!-- 制作人员信息 -->
+            <div class="maker">
+                <div style="width:20px;border-top:3px solid #fff;border-left:0;border-right:0;border-bottom:0;margin-top:0;margin-right:41px;"></div>
+                <div style="width:150px;border-top:3px solid #fff;border-left:0;border-right:0;border-bottom:0;margin-bottom:4px;margin-top:0;margin-right:41px;"></div>
+
+                <div>
+                    <ul style="float:left;">
+                        <li>美工</li>
+                        <li>文字攻略</li>
+                        <li>数据记录</li>
+                    </ul>
+                    <ul style="float:right">
+                        <li>TQ</li>
+                        <li>肯德基</li>
+                        <li>左手的刻痕</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 角色签名 -->
+            <div class="character-sign">
+                <!-- 星级职业 -->
+                <div style="height:54px;margin-right:0;">
+                    <div style="width:110px;display:inline-block;font-size:20px;float:right;">
+                        <div style="text-align:right;margin-right:8px;">先锋</div>
+                        <div style="width:102px;height:1px;background:#fff;float:right"></div>
+                        <div style=";font-weight:600;font-style: italic;font-size:23px;height:28px;line-height:28px">★★★★</div>
+                    </div>
+
+                    <div style="height:54px;display:inline-block;font-size:49px;float:right;margin-right:7px;font-weight:600;">红豆</div>
+                </div>
+
+
+                <div class="difference" style="background:#BB3441;width:171px;height:15px;margin-left:109px;"></div>
+                <div style="font-family:黑体;height:20px;font-style: italic;font-size:39px;font-weight:600;position:relative;left:57px;top:-8px;text-shadow:9px 2px 2px #000, 7px 2px 2px #000;">Vigna</div>
+            </div>
+
+        </div>
+
+        <!-- 测评背景布局 -->
+        <div id="background-body" class="background-body">
+            <div class="title">
+                干员测评分析
+                <div style="width:365px;height:9px;background:white;border-radius:2px 2px 0 2px;box-shadow:5px 2px 6px #000;"></div>
+                <div style="width: 139px;height: 13px;background:white;float:right;box-shadow:3px 5px 6px #000"></div>
+                <div style="width: 14px;height: 14px;background: white;position: absolute;top:22px;right: 42px;box-shadow:5px 2px 6px #000"></div>
+                <div style="width: 53px;height: 8px;background: white;position: absolute;top:33px;right: -3px;border-radius: 0 2px 2px 0px;box-shadow:5px 2px 6px #000"></div>
+                <div style="width: 15px;height: 6px;background: white;position: absolute;top: 48px;right: -3px;border-radius: 0 2px 2px 0px;box-shadow:5px 2px 6px #000"></div>
+            </div>
+            <div class="introduce"><span class="heightLight">亲民</span>，实用的低星先锋，在<span class="heightLight">COST严重吃紧的关卡尤为重要</span></div>
+
+            <div id="main-content">
+                <!-- 小前言 -->
+                <div id="preface"></div>
+
+                <!-- 天赋分析 -->
+                <div id="gift"></div>
+
+                <!-- 技能分析 -->
+                <div id="skill"></div>
+
+                <!-- 使用要领 -->
+                <div id="gist"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="toTop">
+        <div class="toTop-inner1"></div>
+        <div class="toTop-inner2"></div>
+        <div class="toTop-inner3"></div>
+        <div class="toTop-inner4"></div>
+        <div class="toTop-inner5"></div>
+        <div class="toTop-inner6">
+            TO TOP
+        </div>
+    </div>
+
+    <div id="share-curtain"></div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="cell">
+    <div class="cell-img">
+        <img src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/charecter-bust/shining-min.png" alt="">
+    </div>
+    <div class="cell-word">
+        <div class="header">
+            <div class="main-color"></div>
+            <div class="time">2017.09.09<br/>18:18:18</div>
+        </div>
+        <div class="name">闪灵[0001]</div>
+        <div class="type">
+            <div class="duty">
+                <div class="en">MEDIC</div>
+                <div class="ch">医疗</div>
+            </div>
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/SearchBird/ImageIO/master/img/duty/medic_back.png">
+
+            </div>
+        </div>
+        <div class="footer">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/7Q5EUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAACccAVoAAxslRxwBWgADGyVHHAFaAAMbJUccAVoAAxslRxwCAAACAAAAOEJJTQQlAAAAAAAQmomtXShtuiECyMupZwU/2zhCSU0EOgAAAAAA1wAAABAAAAABAAAAAAALcHJpbnRPdXRwdXQAAAAFAAAAAFBzdFNib29sAQAAAABJbnRlZW51bQAAAABJbnRlAAAAAEltZyAAAAAPcHJpbnRTaXh0ZWVuQml0Ym9vbAAAAAALcHJpbnRlck5hbWVURVhUAAAAAQAAAAAAD3ByaW50UHJvb2ZTZXR1cE9iamMAAAAFaCFoN4u+f24AAAAAAApwcm9vZlNldHVwAAAAAQAAAABCbHRuZW51bQAAAAxidWlsdGluUHJvb2YAAAAJcHJvb2ZDTVlLADhCSU0EOwAAAAACLQAAABAAAAABAAAAAAAScHJpbnRPdXRwdXRPcHRpb25zAAAAFwAAAABDcHRuYm9vbAAAAAAAQ2xicmJvb2wAAAAAAFJnc01ib29sAAAAAABDcm5DYm9vbAAAAAAAQ250Q2Jvb2wAAAAAAExibHNib29sAAAAAABOZ3R2Ym9vbAAAAAAARW1sRGJvb2wAAAAAAEludHJib29sAAAAAABCY2tnT2JqYwAAAAEAAAAAAABSR0JDAAAAAwAAAABSZCAgZG91YkBv4AAAAAAAAAAAAEdybiBkb3ViQG/gAAAAAAAAAAAAQmwgIGRvdWJAb+AAAAAAAAAAAABCcmRUVW50RiNSbHQAAAAAAAAAAAAAAABCbGQgVW50RiNSbHQAAAAAAAAAAAAAAABSc2x0VW50RiNQeGxAUgAAAAAAAAAAAAp2ZWN0b3JEYXRhYm9vbAEAAAAAUGdQc2VudW0AAAAAUGdQcwAAAABQZ1BDAAAAAExlZnRVbnRGI1JsdAAAAAAAAAAAAAAAAFRvcCBVbnRGI1JsdAAAAAAAAAAAAAAAAFNjbCBVbnRGI1ByY0BZAAAAAAAAAAAAEGNyb3BXaGVuUHJpbnRpbmdib29sAAAAAA5jcm9wUmVjdEJvdHRvbWxvbmcAAAAAAAAADGNyb3BSZWN0TGVmdGxvbmcAAAAAAAAADWNyb3BSZWN0UmlnaHRsb25nAAAAAAAAAAtjcm9wUmVjdFRvcGxvbmcAAAAAADhCSU0D7QAAAAAAEABIAAAAAQACAEgAAAABAAI4QklNBCYAAAAAAA4AAAAAAAAAAAAAP4AAADhCSU0D8gAAAAAACgAA////////AAA4QklNBA0AAAAAAAQAAAC0OEJJTQQZAAAAAAAEAAAAHjhCSU0D8wAAAAAACQAAAAAAAAAAAQA4QklNJxAAAAAAAAoAAQAAAAAAAAABOEJJTQP1AAAAAABIAC9mZgABAGxmZgAGAAAAAAABAC9mZgABAKGZmgAGAAAAAAABADIAAAABAFoAAAAGAAAAAAABADUAAAABAC0AAAAGAAAAAAABOEJJTQP4AAAAAABwAAD/////////////////////////////A+gAAAAA/////////////////////////////wPoAAAAAP////////////////////////////8D6AAAAAD/////////////////////////////A+gAADhCSU0EAAAAAAAAAgCjOEJJTQQCAAAAAAFOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADhCSU0EMAAAAAAApwEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEB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AAwDAQACEQMRAD8AKktT7Nl/+Uv/AEMn/wBLJfZsv/yl/wChk/8ApZdL78f5Sx/9+8X92n3/AOZl/wDVblpKVoIteHM9IhxBr1G0z9D37n+z+WoqUMBFGlJJJJKUkkkkpSSSSSlJJJJKUkkkkpSSSSSlJJJJKf/Qv+n0v/uRf/2wz/3qS9Ppf/ci/wD7YZ/71Kqkun4T+/L/AJn/AHrxHHH/ADcftyf9+u8NDiGElknaSIJHaWy7b/nJkkk9jUkkkkpSSSSSlJJJJKUkkkkpSSSSSlJJJJKUkkkkp//Z/+ER/Wh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4zLWMwMTEgNjYuMTQ1NjYxLCAyMDEyLzAyLzA2LTE0OjU2OjI3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA2LTE5VDIwOjQzOjU4KzA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTA4LTAzVDExOjA0OjEzKzA4OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wOC0wM1QxMTowNDoxMyswODowMCIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgZGM6Zm9ybWF0PSJpbWFnZS9qcGVnIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVGRjdGNzUxOUJCNUU5MTFCMTIxRjREMDUwM0ZENzFDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmM4Nzk2YzllLWY5YWQtMWY0MS05YWFlLTY1Y2NjZGRmMzlhNiIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmM4Nzk2YzllLWY5YWQtMWY0MS05YWFlLTY1Y2NjZGRmMzlhNiI+IDxwaG90b3Nob3A6RG9jdW1lbnRBbmNlc3RvcnM+IDxyZGY6QmFnPiA8cmRmOmxpPjY0MjEwOEI0QUE4RTU1NDQzRThFREVERTYxRDRDOEM1PC9yZGY6bGk+IDxyZGY6bGk+eG1wLmRpZDo5Nzg2ZmVjMS1kNDgwLTYyNDItOGI3Yi1mMjQ0MjMxOGY0YzY8L3JkZjpsaT4gPC9yZGY6QmFnPiA8L3Bob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpjODc5NmM5ZS1mOWFkLTFmNDEtOWFhZS02NWNjY2RkZjM5YTYiIHN0RXZ0OndoZW49IjIwMTktMDYtMTlUMjA6NDM6NTgrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjg4NzgxOGMwLWRkYjYtYmI0YS04ODRjLTJmNjA5Mjk3NzgwYSIgc3RFdnQ6d2hlbj0iMjAxOS0wNi0xOVQyMDo0NDoyNyswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6RUVGN0Y3NTE5QkI1RTkxMUIxMjFGNEQwNTAzRkQ3MUMiIHN0RXZ0OndoZW49IjIwMTktMDgtMDNUMTE6MDQ6MTMrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjb252ZXJ0ZWQiIHN0RXZ0OnBhcmFtZXRlcnM9ImZyb20gYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcCB0byBpbWFnZS9qcGVnIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL2pwZWciLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOkVGRjdGNzUxOUJCNUU5MTFCMTIxRjREMDUwM0ZENzFDIiBzdEV2dDp3aGVuPSIyMDE5LTA4LTAzVDExOjA0OjEzKzA4OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUVGN0Y3NTE5QkI1RTkxMUIxMjFGNEQwNTAzRkQ3MUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Yzg3OTZjOWUtZjlhZC0xZjQxLTlhYWUtNjVjY2NkZGYzOWE2IiBzdFJlZjpvcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6Yzg3OTZjOWUtZjlhZC0xZjQxLTlhYWUtNjVjY2NkZGYzOWE2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/eHBhY2tldCBlbmQ9InciPz7/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAeAIUDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAECBAUD/8QAJhABAAEBBgUFAAAAAAAAAAAAAAECAwQREiHSEzFUVaJBYXGTlP/EABoBAQACAwEAAAAAAAAAAAAAAAADBAECBgf/xAAeEQEBAAEEAwEAAAAAAAAAAAAAAdERExShAlFS8P/aAAwDAQACEQMRAD8A9h0eBeOxeFruOBeOxeFrudXyfH9Zl57xb76uHPRlXExa1RVRkmKpiaNYyzjy11090WZdVWzS6IA2YAAAAAAAAAAAAbGS4dRb/np3mS49TePop3tcQ7V+r1hY3J8zvK1xTFUxRMzRjOEzGEzHx6ICRAANmAAAAAAAAAAAAH//2Q==" alt="">
+            <div class="author">作者名</div>
+        </div>
+    </div>
+</div>

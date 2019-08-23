@@ -1,0 +1,108 @@
+#gift{
+    margin-bottom:50px;
+}
+
+#gift-content{
+    margin-top:30px;
+    line-height: 200%;
+}
+
+.skill-name{
+    display: inline-block;
+    vertical-align:top;
+}
+
+.skill-desc{
+    margin-left:56px;
+    width:570px;
+    display: inline-block;
+}
+
+.skill-test{
+    margin-top:10px;
+    margin-left:39px;
+    width:800px;
+    text-indent:2em;
+}
+
+.skill-icon{
+    float:right;
+    margin-right:-20px;
+}
+.icon-1{
+    display:inline-block;
+    width:25px;
+    height: 25px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* Internet Explorer */
+    -moz-transform:rotate(45deg); /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); /* Opera */
+}
+.icon-2{
+    position:relative;
+    right: -23px;
+    top: -52px;
+    width:15px;
+    height: 15px;
+    background:#fff;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* Internet Explorer */
+    -moz-transform:rotate(45deg); /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); /* Opera */
+}
+
+.skill-icon-list{
+    vertical-align:top;
+    display:inline-block;
+    width:23px;
+}
+
+.test-icon{
+    position:relative;
+    display:inline-block;
+    width:45px;
+    height: 45px;
+    margin-left:-51px;
+    margin-top: 20px;
+    background:rgba(0,0,0,0);
+    /*box-shadow: -32px -3px 2px -19px #fff, 11px -35px 2px -15px #fff, 36px -37px 2px -9px #fff, 35px -10px 2px -13px #fff;*/
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* Internet Explorer */
+    -moz-transform:rotate(45deg); /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); /* Opera */
+}
+.test-icon .icon01{
+    width:7px;
+    height:7px;
+    background:white;
+    position:absolute;
+    left: -15px;
+    top: 18px;
+}
+.test-icon .icon02{
+    width:13px;
+    height:13px;
+    background:white;
+    position:absolute;
+    left: 28px;
+    top: -19px;
+}
+.test-icon .icon03{
+    width:16px;
+    height: 16px;
+    background:white;
+    position:absolute;
+    left: 45px;
+    top: -3px;
+}
+.test-icon .icon04{
+    width:22px;
+    height:22px;
+    background:white;
+    position:absolute;
+    left: 44px;
+    top: -28px;
+}
